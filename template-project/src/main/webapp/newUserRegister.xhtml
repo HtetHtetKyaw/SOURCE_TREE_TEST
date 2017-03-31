@@ -1,0 +1,85 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+	template="/common/commonLayout.xhtml">
+	<ui:param name="hideLeftContent" value="true" />
+	<ui:define name="content">
+		<h:form id="newUserRegisterForm" enctype="multipart/form-data">
+
+			<h2>User Register</h2>
+             <p:separator />
+           <span class="required">***Required fields</span>
+			<p:messages id="msgs" />
+			<table style="font-size: 14px; width: 1000px;">
+				<tr>
+					<td>Username *</td>
+					<td><p:inputText id="username" style="width:350px;"
+							value="#{NewUserRegisterBean.dto.username}" required="true"
+							label="username" requiredMessage="Username required" >
+							<p:ajax event="blur" listener="#{NewUserRegisterBean.checkDuplicateUsername}" update="usernameDuplicateMsg" />
+							</p:inputText>
+							</td>
+					<td><p:message id="usernameMsg" for="username" />
+					<p:message id="usernameDuplicateMsg" for="username" />
+					</td>
+				</tr>
+				<tr>
+					<td>Password *</td>
+					<td><p:password id="pwd1" style="width:350px;"
+							value="#{NewUserRegisterBean.dto.password}" required="true"
+							label="password" requiredMessage="Password required" /></td>
+					<td><p:message id="passwordMsg" for="pwd1" /></td>
+				</tr>
+				<!-- File Upload with  mode="simple". Only one file can be uploaded. upload using submit button -->	
+				<tr>
+					<td>Upload Image  </td>
+					<td><p:fileUpload id="image" value="#{NewUserRegisterBean.dto.image}" mode="simple" allowTypes="/(\.|\/)(gif|jpe?g|png)$/" skinSimple="true" description="Resume"/></td>
+					<td><p:message id="uploadfileMsg" for="image" display="icon" /> </td>
+				</tr>
+				<tr>
+					<td>Email *</td>
+					<td><p:inputText id="email" style="width:350px;"
+							value="#{NewUserRegisterBean.dto.email}" required="true"
+							label="email" requiredMessage="Email required"
+							validatorMessage="Invalid email format">
+							<f:validateRegex
+								pattern="^[_A-Za-z0-9-\+]+(\.[_A-Za-z0-9-]+)*@[A-Za-z0-9-]+(\.[A-Za-z0-9]+)*(\.[A-Za-z]{2,})$" />
+						</p:inputText></td>
+					<td><p:message id="emailMsg" for="email" display="icon" /></td>
+				</tr>
+				<tr>
+					<td>Date Of Birth *</td>
+					<td>
+					<p:calendar id="DOB" value="#{NewUserRegisterBean.dto.DOB}" locale="en" navigator="true" pattern="yyyy-MMM-dd" required="true"
+							requiredMessage="Date Of Birth required" yearRange="c-70:c-10" showOn="button"/></td>
+					<td><p:message id="DOBMsg" for="DOB" display="icon" /></td>
+				</tr>
+				<tr>
+					<td>Phone No.*</td>
+					<td><p:inputMask id="phoneno" style="width:350px;"
+							value="#{NewUserRegisterBean.dto.phoneno}" mask="(999) 999-9999"
+							required="true" requiredMessage="Phone no required"></p:inputMask></td>
+					<td><p:message id="phonenoMsg" for="phoneno" display="icon" /></td>
+				</tr>
+				<tr>
+					<td>Address</td>
+					<td><p:inputTextarea id="address"
+							value="#{NewUserRegisterBean.dto.address}" rows="5" cols="50"
+							counter="display" maxlength="200"
+							counterTemplate="{0} characters remaining." autoResize="false" />
+						<h:outputText id="display" /></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td><p:commandButton value="Back"
+							action="#{NewUserRegisterBean.processBack}" immediate="true" /> 
+							<h:commandButton value="Continuous" action="#{NewUserRegisterBean.processContinuous}" /></td>
+				</tr>
+			</table>
+			<p></p>
+		</h:form>
+	</ui:define>
+</ui:composition>

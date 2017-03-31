@@ -1,0 +1,42 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+	template="/common/commonLayout.xhtml">
+	<ui:param name="hideLeftContent" value="true" />
+	<ui:define name="content">
+	  <div id="loginFormDiv">
+		<h:form id="loginForm">
+			<h2>User Login</h2>
+			<span class="required">***Required fields</span>
+			 <p:messages id="msgs" />
+			<table>
+			<tr>
+				<td><p:outputLabel value="Username: *" /></td>
+				<td> </td>
+				<td><p:inputText id="username"
+					value="#{LoginBean.loginDto.username}" required="true"
+					label="Username" /></td>
+					<td><p:message id="usernameMsg" for="username" display="icon"/></td>
+			 </tr>
+			 <tr>
+				<td><p:outputLabel value="Password:*" /></td>
+				<td> </td>
+				<td><p:password id="password"
+					value="#{LoginBean.loginDto.password}" required="true"
+					label="Password" /></td>
+					<td><p:message id="passwordMsg" for="password" display="icon" /></td>
+				</tr>
+			</table>
+			<p></p>
+            <h:commandButton value="Back To Home" type="submit" action="#{LoginBean.processBack}" immediate="true"/>
+            <h:commandButton value="Login" type="submit"  action="#{LoginBean.processLogin}"/>
+            <p:outputLabel></p:outputLabel>
+				<span class="errMsg"><p:outputLabel value="#{LoginBean.loginStatus}"  id="loginStatusMsg"/></span>
+				<p></p>
+		<span class="nameTitle"><h:commandLink action="#{LoginBean.processNewUserRegister}" value="New User Register" immediate="true" /></span>
+		</h:form>
+		</div>
+	</ui:define>
+</ui:composition>

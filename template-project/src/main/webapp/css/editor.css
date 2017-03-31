@@ -1,0 +1,193 @@
+.editable a {
+  color: #0088cc;
+  text-decoration: none;
+}
+.editable a:hover {
+  color: #005580;
+  text-decoration: underline;
+}
+.editable p {
+  margin: 0 0 9px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+.editable p small {
+  font-size: 11px;
+  color: #999999;
+}
+.editable h1,
+.editable h2,
+.editable h3,
+.editable h4,
+.editable h5,
+.editable h6 {
+  margin: 0;
+  font-weight: bold;
+  color: #333333;
+  text-rendering: optimizelegibility;
+}
+.editable h1 small,
+.editable h2 small,
+.editable h3 small,
+.editable h4 small,
+.editable h5 small,
+.editable h6 small {
+  font-weight: normal;
+  color: #999999;
+}
+.editable h1 {
+  font-size: 30px;
+  line-height: 36px;
+}
+.editable h1 small {
+  font-size: 18px;
+}
+.editable h2 {
+  font-size: 24px;
+  line-height: 36px;
+}
+.editable h2 small {
+  font-size: 18px;
+}
+.editable h3 {
+  line-height: 27px;
+  font-size: 18px;
+}
+.editable h3 small {
+  font-size: 14px;
+}
+.editable h4, h5, h6 {
+  line-height: 18px;
+}
+.editable h4 {
+  font-size: 14px;
+}
+.editable h4 small {
+  font-size: 12px;
+}
+.editable h5 {
+  font-size: 12px;
+}
+.editable h6 {
+  font-size: 11px;
+  color: #999999;
+  text-transform: uppercase;
+}
+.editable ul, ol {
+  padding: 0;
+  margin: 0 0 9px 25px;
+}
+.editable ul ul,
+.editable ul ol,
+.editable ol ol,
+.editable ol ul {
+  margin-bottom: 0;
+}
+.editable ul {
+  list-style: disc;
+  font-size:14px;
+}
+.editable ol {
+  list-style: decimal;
+  font-size:14px;
+}
+.editable li {
+  line-height: 18px;
+  font-size:14px;
+}
+.editable ul.unstyled {
+  margin-left: 0;
+  list-style: none;
+}
+.editable hr {
+  margin: 18px 0;
+  border: 0;
+  border-top: 1px solid #e5e5e5;
+  border-bottom: 1px solid #ffffff;
+}
+.editable strong {
+  font-weight: bold;
+}
+.editable em {
+  font-style: italic;
+}
+.editable blockquote {
+  padding: 0 0 0 15px;
+  margin: 0 0 18px;
+  border-left: 8px solid #E1E1E1;
+}
+.editable blockquote p {
+  margin-bottom: 0;
+  font-size: 13px;
+  font-weight: 300;
+  line-height: 22.5px;
+}
+.editable blockquote small {
+  display: block;
+  line-height: 18px;
+  color: #999999;
+}
+.editable blockquote small:before {
+  content: '\2014 \00A0';
+}
+.editable blockquote.pull-right {
+  float: right;
+  padding-left: 0;
+  padding-right: 15px;
+  border-left: 0;
+  border-right: 5px solid #eeeeee;
+}
+.editable blockquote.pull-right p, blockquote.pull-right small {
+  text-align: right;
+}
+.editable q:before,
+.editable q:after,
+.editable blockquote:before,
+blockquote:after {
+  content: "";
+}
+.editable code, pre {
+  padding: 0 3px 2px;
+  font-family: Menlo, Monaco, "Courier New", monospace;
+  font-size: 12px;
+  color: #333333;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+
+.editable pre {
+  display: block;
+  padding: 8.5px;
+  margin: 0 0 9px;
+  font-size: 12px;
+  line-height: 18px;
+  background-color: #f5f5f5;
+  border: 1px solid #ccc;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  white-space: pre;
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+.editable pre.prettyprint {
+  margin-bottom: 18px;
+}
+.editable pre code {
+  padding: 0;
+  background-color: transparent;
+}
+.editable hr {
+    margin: 10px 0px;
+    border-width: 3px;
+    border-style: solid none;
+    border-color: #E1E1E1;
+    -moz-border-top-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    border-image: none;
+}

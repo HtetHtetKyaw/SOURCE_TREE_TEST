@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pageflow:Pageflow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pageflow="http://www.sybase.com/suade/pageflow" id="pf14546478159550" configfile="/template-project/src/main/webapp/WEB-INF/faces-config.xml">
+  <nodes xsi:type="pageflow:PFPage" name="*" x="122" y="946" id="pf14550724935410" referenceLink="//@navigationRule.0/@fromViewId|" outlinks="pf14550724935411 pf14550724935412 pf14550724935413 pf14550955935277 pf14551760707570 pf14556840125230 pf14556840125231 pf14562127518770 pf14562127518771 pf14562127518772 pf14562127518773 pf14562127518774 pf14562127518775" path="/*"/>
+  <nodes xsi:type="pageflow:PFPage" name="managePost.xhtml" x="338" y="178" id="pf14550724935424" referenceLink="//@navigationRule.0/@navigationCase.0/@toViewId|" inlinks="pf14550724935411" path="managePost.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="postDetails.xhtml" x="338" y="562" id="pf14550724935425" referenceLink="//@navigationRule.0/@navigationCase.1/@toViewId|" inlinks="pf14550724935412" path="postDetails.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="jobDetails.xhtml" x="338" y="946" id="pf14550724935426" referenceLink="//@navigationRule.0/@navigationCase.2/@toViewId|" inlinks="pf14550724935413" path="jobDetails.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="home.xhtml" x="338" y="1330" id="pf14550955935278" referenceLink="//@navigationRule.0/@navigationCase.3/@toViewId|" inlinks="pf14550955935277" path="home.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="login.xhtml" x="338" y="1714" id="pf14551760707572" referenceLink="//@navigationRule.0/@navigationCase.4/@toViewId|" inlinks="pf14551760707570" path="login.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="newUserRegister.xhtml" id="pf14556840125242" referenceLink="//@navigationRule.0/@navigationCase.11/@toViewId|" inlinks="pf14556840125230" path="newUserRegister.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="newUserRegisterConfirm.xhtml" id="pf14556840125243" referenceLink="//@navigationRule.0/@navigationCase.12/@toViewId|" inlinks="pf14556840125231" path="newUserRegisterConfirm.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="secured/userJobManagement.xhtml" id="pf14562127518786" referenceLink="//@navigationRule.0/@navigationCase.5/@toViewId|" inlinks="pf14562127518770" path="secured/userJobManagement.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="secured/userJobDetails.xhtml" id="pf14562127518787" referenceLink="//@navigationRule.0/@navigationCase.6/@toViewId|" inlinks="pf14562127518771" path="secured/userJobDetails.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="secured/newPost.xhtml" id="pf14562127518788" referenceLink="//@navigationRule.0/@navigationCase.7/@toViewId|" inlinks="pf14562127518772" path="secured/newPost.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="secured/newPostConfirm.xhtml" id="pf14562127518789" referenceLink="//@navigationRule.0/@navigationCase.8/@toViewId|" inlinks="pf14562127518773" path="secured/newPostConfirm.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="secured/editPost.xhtml" id="pf145621275187810" referenceLink="//@navigationRule.0/@navigationCase.9/@toViewId|" inlinks="pf14562127518774" path="secured/editPost.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="secured/editPostConfirm.xhtml" id="pf145621275187811" referenceLink="//@navigationRule.0/@navigationCase.10/@toViewId|" inlinks="pf14562127518775" path="secured/editPostConfirm.xhtml"/>
+  <links id="pf14550724935411" target="pf14550724935424" source="pf14550724935410" outcome="managePost"/>
+  <links id="pf14550724935412" target="pf14550724935425" source="pf14550724935410" outcome="details"/>
+  <links id="pf14550724935413" target="pf14550724935426" source="pf14550724935410" outcome="jobDetails"/>
+  <links id="pf14550955935277" target="pf14550955935278" source="pf14550724935410" outcome="home"/>
+  <links id="pf14551760707570" target="pf14551760707572" source="pf14550724935410" outcome="login"/>
+  <links id="pf14556840125230" target="pf14556840125242" source="pf14550724935410" outcome="newUserRegister"/>
+  <links id="pf14556840125231" target="pf14556840125243" source="pf14550724935410" outcome="newUserRegisterConf"/>
+  <links id="pf14562127518770" target="pf14562127518786" source="pf14550724935410" outcome="userJobManagement"/>
+  <links id="pf14562127518771" target="pf14562127518787" source="pf14550724935410" outcome="userJobDetail"/>
+  <links id="pf14562127518772" target="pf14562127518788" source="pf14550724935410" outcome="newPost"/>
+  <links id="pf14562127518773" target="pf14562127518789" source="pf14550724935410" outcome="newPostConfirm"/>
+  <links id="pf14562127518774" target="pf145621275187810" source="pf14550724935410" outcome="editPost"/>
+  <links id="pf14562127518775" target="pf145621275187811" source="pf14550724935410" outcome="editPostConfirm"/>
+</pageflow:Pageflow>
