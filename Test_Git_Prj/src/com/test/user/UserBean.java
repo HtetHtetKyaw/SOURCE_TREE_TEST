@@ -17,18 +17,41 @@ public class UserBean implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 
-	private String name;
+	private String firstName;
+	
+	private String secondName;
 
 	@PostConstruct
 	public void init() {
-		name = "Donghae";
+		firstName = "Nakamoto";
+		secondName = "Yuta";
 	}
 
-	public String getName() {
-		return name;
+	/**
+	 * @return the firstName
+	 */
+	public String getFirstName() {
+		return firstName;
 	}
 
-	public void setName(String name) {
-		this.name = name;
+	/**
+	 * @param firstName the firstName to set
+	 */
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
+
+	/**
+	 * @return the secondName
+	 */
+	public String getSecondName() {
+		return secondName;
+	}
+
+	/**
+	 * @param secondName the secondName to set
+	 */
+	public void setSecondName(String secondName) {
+		this.secondName = secondName;
 	}
 }
