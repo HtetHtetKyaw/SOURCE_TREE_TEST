@@ -24,7 +24,7 @@ public class UserBean implements Serializable {
 	@PostConstruct
 	public void init() {
 		firstName = "Nakamoto";
-		secondName = "Yuta";
+		secondName = "Yuta Jeno";
 	}
 
 	/**
