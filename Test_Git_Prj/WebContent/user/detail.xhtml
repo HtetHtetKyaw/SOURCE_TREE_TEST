@@ -1,11 +1,19 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
-				xmlns:ui="http://java.sun.com/jsf/facelets"
-				xmlns:h="http://java.sun.com/jsf/html"
-				xmlns:f="http://java.sun.com/jsf/core">
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
 <title>Detail</title>
 <head>
 </head>
-<body><h:outputLabel value="Name:"/><h:outputText value="#{DetailBean.name}"></h:outputText>
-<h:outputLabel value="Age"/><h:outputText value="#{DetailBean.age}"></h:outputText>
+<body>
+	<h:form id="form1">
+		<h:outputLabel value="Name:" />
+		<h:outputText value="#{DetailBean.name}"></h:outputText>
+		<h:outputLabel value="Age" />
+		<h:outputText value="#{DetailBean.age}"></h:outputText>
+		<div>
+			<h:commandLink value="Profile Image" action="profile"></h:commandLink>
+		</div>
+	</h:form>
 </body>
 </html>
