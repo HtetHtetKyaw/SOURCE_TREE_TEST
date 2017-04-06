@@ -1,10 +1,15 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
-				xmlns:ui="http://java.sun.com/jsf/facelets"
-				xmlns:h="http://java.sun.com/jsf/html"
-				xmlns:f="http://java.sun.com/jsf/core">
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
 <title>Home</title>
 <head>
 </head>
-<body><h:outputLabel value="Hello!!****   #{UserBean.firstName}  #{UserBean.secondName}"></h:outputLabel>
+<body>
+	<h:form id="form1">
+		<h:outputLabel
+			value="Hello!!****   #{UserBean.firstName}  #{UserBean.secondName}"></h:outputLabel>
+		<h:commandButton action="detail"></h:commandButton>
+	</h:form>
 </body>
 </html>
